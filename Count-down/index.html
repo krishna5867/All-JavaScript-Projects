@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+</head>
+<style>
+   input{
+    text-align: center;
+    width: 250px;
+    height: 49px;
+    margin-top: 30px;
+    outline: none;
+    border-radius: 6px;
+    font-size: 20px;
+    border: 2px solid #964ce1;
+   }
+   button{
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    background: #964ce1;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+
+   }
+   body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .output{
+    /* margin-left: -100px; */
+    font-size: 4.5rem;
+    padding: 2rem 0rem;
+   }
+   .container{
+    text-align: center;
+    background: #ececec;
+    padding: 3rem 6rem;
+    box-shadow: 5px 15px 20px  #964ce1;
+   }
+   h1{
+    font-size: 3rem;
+    margin-top: 0;
+   }
+
+</style>
+<body>
+<div class="container">
+    <h1> Stop Watch</h1>
+    <input type="text" class="count" placeholder="Enter Time In Second here">
+    <button class="btn">Start</button>
+    <div class="output"></div>
+</div>
+    
+    <script>
+       
+        // alert("Enter time in seconds");
+        let output = document.querySelector(".output");
+        let btn = document.querySelector("button");
+
+    
+
+        btn.addEventListener("click", start);
+
+
+        function start(){
+            let set = setInterval(abc, 1000);
+            let count = document.querySelector("input").value;
+
+                function abc(){
+                    count--
+                    
+                    if(count > 0){
+                    output.innerText = count;
+                    let input = document.querySelector("input");
+                    input.style.display = "none";
+                    btn.style.display = "none";
+
+                    }else{
+                        clearInterval(set);
+                    console.log(count);
+                    console.log("Task completed");
+                    output.innerText = "Time Out";
+
+                    }
+                }
+        }
+
+    </script>
+</body>
+</html>
