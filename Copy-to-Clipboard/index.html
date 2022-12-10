@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to clipboard</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(210, 24, 210);
+    }
+    input{
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        border: 2px solid rgb(210, 24, 210);
+        color: rgb(105, 4, 105);
+        outline: none;
+        margin-left: 40px;
+
+    }
+    button{
+        width: 110px;
+        height: 56px;
+        background: rgb(210, 24, 210);
+        color: #fff;
+        font-size: 22px;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+    }
+    .container{
+        padding: 20px;
+        width: 500px;
+        height: 350px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    h1{
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 30px;
+    
+    }
+    textarea{
+        margin-left: 40px;
+        margin-top: 30px;
+        width: 400px;
+        height: 120px;
+        border: 2px solid rgb(210, 24, 210);
+        padding: 10px;
+        font-size: 22px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Copy To clipboard</h1>
+        <input type="text" id="inp">
+        <button id="btn">Copy</button> <br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Paste here to check..."></textarea>
+    </div>
+    <script>
+        let inp = document.querySelector("#inp");
+        let btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", ()=>{
+            inp.select();
+            alert("Text Copied");
+
+            document.execCommand("copy");
+
+            setTimeout(function(){
+                inp.value = "";
+            },2500)
+        })
+    </script>
+</body>
+</html>
