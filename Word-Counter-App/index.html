@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word & Character Counter </title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #006780;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .box{
+        width: 800px;
+        display: block;
+    }
+    h1{
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+        font-size: 42px;
+    }
+    p{
+        background-color: #007890;
+        padding: 10px;
+        text-align: center;
+        font-size: 32px
+    }
+textarea{
+    width: 793px;
+    height: 400px;
+    font-size: 28px;
+    border: 2px solid #007890;
+    outline: none;
+}
+span{
+    color: white;
+}
+.btn{
+    padding: 5px 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #007890;
+}
+.btn-clear{
+    margin-left: 100px;
+}
+.btn-copy{
+    margin-right: 100px;
+}
+@media (max-width: 786px){
+    textarea{
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    textarea{
+        height: 300px;
+    }
+    h1{
+        font-size: 32px;
+    }
+    p{
+        font-size: 21px;
+    }
+
+}
+</style>
+<body>
+<div class="wrapper">
+    <div class="box">
+        <h1>Words and Character</h1> 
+        <textarea id="textbox">
+        </textarea>
+    </div>
+    <div>
+        <p>
+        <button class="btn btn-copy" onclick="copy()">Copy</button>
+
+            <span id="words">0</span> Words and 
+            <span id="char">0</span> Character
+        <button class="btn btn-clear" onclick="clear()">Clear</button>
+    
+        </p>
+    </div>
+</div>
+
+    <script>
+let textbox = document.getElementById("textbox");
+let clear = document.querySelector(".btn-clear");
+
+
+
+
+
+textbox.addEventListener('input', function(){
+    var text  = this.value;
+    let char = text.length;
+    document.getElementById("char").innerHTML = char;
+
+  
+    text = text.trim();
+    let words = text.split(" ");
+    let cleanList = words.filter(function(element){
+        return element != "";
+    });
+    document.getElementById("words").innerHTML = cleanList.length;
+
+    clear.addEventListener("click",()=>{
+    textbox.value = "";
+    document.getElementById("char").innerHTML = "0";
+    document.getElementById("words").innerHTML = "0";
+    console.log("clear");
+})
+});
+
+
+    </script>
+</body>
+</html>
