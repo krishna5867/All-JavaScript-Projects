@@ -6,7 +6,6 @@
 ## Password Generator [Live link](https://password-generator-sandy-one.vercel.app/)
 ## Random Joke Generator [Live link](https://random-joke-generator-java-script-zo52.vercel.app/)
 ## Qr Code Generator [Live link](https://qr-generator-js-pb1v.vercel.app/)
-## Age Calculator [Live link](https://age-calculator-java-script-x9ql.vercel.app/)
 ## Age Calculator [Live link](https://age-calculator-ruby.vercel.app/)
 ## Basic Counter [Live link](https://basic-counter-javascript.vercel.app/)
 ## Binary To Decimal [Live link](https://binary2decimal-javascript.vercel.app/)
@@ -19,8 +18,7 @@
 ## Quiz App [Live link](https://quizapp-javascript.vercel.app/)
 ## Palindrome Checker [Live link](https://palindrome-checker-java-scrip.vercel.app/)
 ## Copy To Clipboard [Live link](https://copy-to-clipboard-javascript-kk.vercel.app/)
-## Random Quote Generator [Live link](https://random-quote-generator-java-script-th8r.vercel.app/)
 ## Random Quote Generator [Live link](https://random-quote-generator-javascript.vercel.app/)
 ## See What You Type  [Live link](https://see-what-you-type-javascript.vercel.app/)
 ## Todo App [Live link](https://to-do-app-javascript.vercel.app/)
-## Video Player [Live link](https://video-player-javascript-pi.vercel.app/)
+
